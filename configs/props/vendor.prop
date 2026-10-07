@@ -16,6 +16,12 @@ vendor.display.vds_allow_hwc=true
 # DPM
 persist.vendor.dpm.vndr.feature=1
 
+# Fingerprint
+persist.vendor.fingerprint.type=side
+ro.hardware.fp.sideCap=true
+ro.hardware.fp.fod=false
+ro.hardware.fp.mievent=true
+
 # Graphics
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.supports_background_blur=1
