@@ -1,0 +1,27 @@
+# Audio
+ro.audio.monitorRotation=false
+ro.vendor.audio.soundtrigger.appdefine.gmm.level=55
+ro.vendor.audio.soundtrigger.appdefine.gmm.user.level=65
+ro.vendor.audio.soundtrigger.xanzn.cnn.level=58
+ro.vendor.audio.soundtrigger.xanzn.vop.level=10
+ro.vendor.audio.soundtrigger.xatx.gmm.level=40
+ro.vendor.audio.soundtrigger.xatx.gmm.user.level=40
+
+# Bluetooth
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+
+# Display
+vendor.display.vds_allow_hwc=true
+
+# DPM
+persist.vendor.dpm.vndr.feature=1
+
+# Graphics
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.supports_background_blur=1
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.use_content_detection_for_refresh_rate=false
+ro.surface_flinger.wcg_composition_dataspace=143261696
+
+# Radio
+persist.vendor.radio.custom_ecc=0

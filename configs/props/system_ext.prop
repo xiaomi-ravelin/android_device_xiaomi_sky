@@ -1,0 +1,8 @@
+# Bluetooth
+bluetooth.profile.sap.server.enabled=false
+
+# DPM
+persist.vendor.dpm.feature=1
+
+# Xiaomi
+ro.product.mod_device=sky_in_global

@@ -20,5 +20,10 @@ TARGET_SCREEN_DENSITY := 440
 # Kernel
 TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_SKY_DTB=y
 
+# Properties
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
+
 # Include the proprietary files BoardConfig.
 include vendor/xiaomi/sky/BoardConfigVendor.mk
