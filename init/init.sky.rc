@@ -1,0 +1,10 @@
+# Pick the audio calibration like the stock AGM does, it is
+# loaded from the ravelin_qrd directory.
+on init
+    mount none /vendor/etc/acdbdata/ravelin_qrd_cust /vendor/etc/acdbdata/ravelin_qrd bind
+
+on property:ro.boot.hwc=India
+    mount none /vendor/etc/acdbdata/ravelin_qrd_cust_in /vendor/etc/acdbdata/ravelin_qrd bind
+
+on property:ro.boot.hwc=JP
+    mount none /vendor/etc/acdbdata/ravelin_qrd_cust_jp /vendor/etc/acdbdata/ravelin_qrd bind
