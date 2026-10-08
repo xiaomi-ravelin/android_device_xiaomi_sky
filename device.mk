@@ -17,6 +17,10 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2460
 TARGET_SCREEN_WIDTH := 1080
 
+# Gralloc
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.allocator@4.0.vendor
+
 # Init
 PRODUCT_PACKAGES += \
     init.sky.rc
