@@ -19,6 +19,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
+    framework_compatibility_matrix.camx_hidl.xml \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     libqti_vndfwk_detect.vendor \

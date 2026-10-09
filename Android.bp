@@ -11,3 +11,10 @@ vintf_fragment {
     src: "configs/vintf/manifest_camx_hidl.xml",
     vendor: true,
 }
+
+vintf_compatibility_matrix {
+    name: "framework_compatibility_matrix.camx_hidl.xml",
+    stem: "compatibility_matrix.camx_hidl.xml",
+    srcs: ["configs/vintf/framework_compatibility_matrix_camx_hidl.xml"],
+    product_specific: true,
+}
