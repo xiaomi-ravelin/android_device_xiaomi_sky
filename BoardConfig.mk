@@ -22,9 +22,22 @@ TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_SKY_DTB=y
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     fpc1020_platform_tee.ko \
+    fts_8720.ko \
     gf_spi.ko \
     ir-spi.ko \
-    nxp-nci.ko
+    nvt_36672c.ko \
+    nxp-nci.ko \
+    xiaomi_touch.ko
+
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD += \
+    fts_8720.ko \
+    nvt_36672c.ko \
+    xiaomi_touch.ko
+
+BOOT_KERNEL_MODULES += \
+    fts_8720.ko \
+    nvt_36672c.ko \
+    xiaomi_touch.ko
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
