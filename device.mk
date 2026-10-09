@@ -19,7 +19,12 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    manifest_camx_hidl.xml
+    libprotobuf-cpp-full-3.9.1-vendorcompat \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
+    libqti_vndfwk_detect.vendor \
+    libstdc++_vendor \
+    manifest_camx_hidl.xml \
+    vendor.qti.hardware.camera.postproc@1.0.vendor
 
 # Gralloc
 PRODUCT_HIDL_ENABLED := true
