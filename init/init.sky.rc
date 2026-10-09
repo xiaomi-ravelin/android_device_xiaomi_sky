@@ -36,9 +36,11 @@ on boot
     chown system system /proc/touchscreen/proximity_switch
     chown system system /proc/touchscreen/store_data_proximity
     chown system system /sys/class/touch/touch_dev/palm_sensor
+    chown system system /sys/class/touch/touch_dev/gesture_double_tap_enabled
     chmod 0664 /proc/touchscreen/proximity_switch
     chmod 0664 /proc/touchscreen/store_data_proximity
     chmod 0664 /sys/class/touch/touch_dev/palm_sensor
+    chmod 0664 /sys/class/touch/touch_dev/gesture_double_tap_enabled
 
 on post-fs-data
     mkdir /data/vendor/fpc 0770 system system

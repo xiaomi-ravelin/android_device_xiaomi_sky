@@ -45,6 +45,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.sky.rc
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResSky
+
+# Power
+$(call soong_config_set,qtipower,tap_to_wake_node,/sys/class/touch/touch_dev/gesture_double_tap_enabled)
+
 # Sensors
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_ravelin/android.hardware.sensor.gyroscope.xml
