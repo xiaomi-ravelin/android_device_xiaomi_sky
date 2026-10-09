@@ -25,6 +25,11 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/vendor.qti.hardware.display.allocator@4.0-service': blob_fixup()
         .replace_needed('libgralloccore.so', 'libgralloccore_hidl.so')
         .replace_needed('libgrallocutils.so', 'libgrallocutils_hidl.so'),
+    (
+        'vendor/lib64/hw/fingerprint.fpc.default.so',
+        'vendor/lib64/hw/fingerprint.goodix.default.so',
+    ): blob_fixup()
+        .fix_soname(),
     'vendor/lib64/hw/camera.qcom.so': blob_fixup()
         .replace_needed('libsnsapi.so', 'libsnsapi_camx.so'),
     'vendor/lib64/libcamximageformatutils.so': blob_fixup()

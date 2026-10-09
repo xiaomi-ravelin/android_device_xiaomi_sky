@@ -20,6 +20,10 @@ TARGET_SCREEN_DENSITY := 440
 # Kernel
 TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_SKY_DTB=y
 
+BOARD_VENDOR_KERNEL_MODULES_LOAD += \
+    fpc1020_platform_tee.ko \
+    gf_spi.ko
+
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
 TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop

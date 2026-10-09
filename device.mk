@@ -26,6 +26,12 @@ PRODUCT_PACKAGES += \
     manifest_camx_hidl.xml \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.xiaomi \
+    android.hardware.biometrics.fingerprint@2.1.vendor \
+    com.fingerprints.extension@1.0.vendor
+
 # Gralloc
 PRODUCT_HIDL_ENABLED := true
 
