@@ -22,7 +22,8 @@ TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_SKY_DTB=y
 
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     fpc1020_platform_tee.ko \
-    gf_spi.ko
+    gf_spi.ko \
+    ir-spi.ko
 
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
