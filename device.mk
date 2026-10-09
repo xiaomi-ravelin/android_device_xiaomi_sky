@@ -17,8 +17,17 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2460
 TARGET_SCREEN_WIDTH := 1080
 
-# Gralloc
+# Camera
 PRODUCT_PACKAGES += \
+    manifest_camx_hidl.xml
+
+# Gralloc
+PRODUCT_HIDL_ENABLED := true
+
+PRODUCT_PACKAGES += \
+    hwservicemanager \
+    vendor.qti.hardware.display.allocator@3.0.vendor \
+    vendor.qti.hardware.display.allocator@4.0-service.rc \
     vendor.qti.hardware.display.allocator@4.0.vendor
 
 # Init

@@ -22,6 +22,14 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/bin/hw/vendor.qti.hardware.display.allocator@4.0-service': blob_fixup()
+        .replace_needed('libgralloccore.so', 'libgralloccore_hidl.so')
+        .replace_needed('libgrallocutils.so', 'libgrallocutils_hidl.so'),
+    'vendor/lib64/libgralloccore_hidl.so': blob_fixup()
+        .fix_soname()
+        .replace_needed('libgrallocutils.so', 'libgrallocutils_hidl.so'),
+    'vendor/lib64/libgrallocutils_hidl.so': blob_fixup()
+        .fix_soname(),
     'vendor/lib64/camera/': blob_fixup()
         .clear_symbol_version('remote_register_buf'),
 }

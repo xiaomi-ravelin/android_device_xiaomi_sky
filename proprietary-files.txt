@@ -275,6 +275,12 @@ vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 
+# Graphics (Gralloc)
+vendor/bin/hw/vendor.qti.hardware.display.allocator-service:vendor/bin/hw/vendor.qti.hardware.display.allocator@4.0-service
+vendor/lib64/libgralloccore.so:vendor/lib64/libgralloccore_hidl.so
+vendor/lib64/libgrallocutils.so:vendor/lib64/libgrallocutils_hidl.so
+vendor/lib64/libqdMetaData.so
+
 # Graphics (Adreno firmware)
 vendor/firmware/a630_sqe.fw
 vendor/firmware/gen6_3_26_0_zap.b00

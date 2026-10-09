@@ -5,3 +5,9 @@
 
 soong_namespace {
 }
+
+vintf_fragment {
+    name: "manifest_camx_hidl.xml",
+    src: "configs/vintf/manifest_camx_hidl.xml",
+    vendor: true,
+}
