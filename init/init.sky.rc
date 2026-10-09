@@ -45,3 +45,24 @@ on boot
 on post-fs-data
     mkdir /data/vendor/fpc 0770 system system
     mkdir /data/vendor/goodix 0770 system system
+
+# NFC SKUs, from stock init_nfc_sn1xxx.rc
+on early-init && property:ro.boot.boardid=S88019BP1
+    setprop ro.boot.product.hardware.sku hcesimese
+    setprop ro.vendor.se.type eSE,HCE,UICC
+
+on early-init && property:ro.boot.boardid=S88018PA1
+    setprop ro.boot.product.hardware.sku hcesimese
+    setprop ro.vendor.se.type eSE,HCE,UICC
+
+on early-init && property:ro.boot.boardid=S88029JA1
+    setprop ro.boot.product.hardware.sku hcesim1ese
+    setprop ro.vendor.se.type eSE,HCE,UICC
+
+on early-init && property:ro.boot.boardid=S88029EA1
+    setprop ro.boot.product.hardware.sku hcesim1ese
+    setprop ro.vendor.se.type eSE,HCE,UICC
+
+on early-init && property:ro.boot.boardid=S88029AA1
+    setprop ro.boot.product.hardware.sku hcesim
+    setprop ro.vendor.se.type HCE,UICC

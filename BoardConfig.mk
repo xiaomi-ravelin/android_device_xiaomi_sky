@@ -23,7 +23,8 @@ TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_SKY_DTB=y
 BOARD_VENDOR_KERNEL_MODULES_LOAD += \
     fpc1020_platform_tee.ko \
     gf_spi.ko \
-    ir-spi.ko
+    ir-spi.ko \
+    nxp-nci.ko
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop

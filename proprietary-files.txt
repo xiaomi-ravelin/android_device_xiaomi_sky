@@ -331,6 +331,12 @@ odm/etc/permissions/sku_hcesimese/android.hardware.se.omapi.ese.xml
 odm/etc/permissions/sku_hcesimese/android.hardware.se.omapi.uicc.xml
 odm/etc/permissions/sku_hcesimese/com.android.nfc_extras.xml
 odm/etc/permissions/sku_hcesimese/com.nxp.mifare.xml
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-qrd-SN100_CN.conf:odm/etc/libnfc-hcesimese.conf
+vendor/etc/libnfc-qrd-SN100_GLB.conf:odm/etc/libnfc-hcesim.conf
+vendor/etc/libnfc-qrd-SN100_GLB.conf:odm/etc/libnfc-hcesim1.conf
+vendor/etc/libnfc-qrd-SN100_JP.conf:odm/etc/libnfc-hcesim1ese.conf
+vendor/lib64/libsn100u_fw.so
 
 # RemoteFS
 vendor/bin/rmt_storage
