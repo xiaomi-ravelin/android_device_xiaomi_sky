@@ -32,6 +32,11 @@ blob_fixups: blob_fixups_user_type = {
         .fix_soname(),
     'vendor/lib64/hw/camera.qcom.so': blob_fixup()
         .replace_needed('libsnsapi.so', 'libsnsapi_camx.so'),
+    'vendor/etc/sensors/hals.conf': blob_fixup()
+        .regex_replace(r'sensors\.ssc\.so', 'sensors.ssc_sky.so'),
+    'vendor/lib64/sensors.touch.so': blob_fixup()
+        .replace_needed('libsnsapi.so', 'libsnsapi_camx.so')
+        .replace_needed('libssc.so', 'libssc_sky.so'),
     'vendor/lib64/libcamximageformatutils.so': blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V2-ndk_platform.so', 'vendor.qti.hardware.display.config-V5-ndk.so'),
     'vendor/lib64/libgralloccore_hidl.so': blob_fixup()
@@ -43,6 +48,15 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib64/libsnsapi_camx.so': blob_fixup()
         .fix_soname(),
+    (
+        'vendor/lib64/libsnsdiaglog_sky.so',
+        'vendor/lib64/libssc_sky.so',
+        'vendor/lib64/sensors.ssc_sky.so',
+    ): blob_fixup()
+        .fix_soname()
+        .replace_needed('libsnsapi.so', 'libsnsapi_camx.so')
+        .replace_needed('libssc.so', 'libssc_sky.so')
+        .replace_needed('libsnsdiaglog.so', 'libsnsdiaglog_sky.so'),
     'vendor/lib64/camera/': blob_fixup()
         .clear_symbol_version('remote_register_buf'),
 }
