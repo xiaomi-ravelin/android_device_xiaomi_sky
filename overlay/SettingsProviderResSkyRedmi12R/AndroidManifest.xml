@@ -1,0 +1,12 @@
+<!--
+     Copyright (C) 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.providers.settings.overlay.sky.redmi12r">
+    <overlay android:targetPackage="com.android.providers.settings"
+                   android:isStatic="true"
+                   android:priority="700"
+                   android:requiredSystemPropertyName="ro.odm.product.marketname"
+                   android:requiredSystemPropertyValue="Redmi 12R"/>
+</manifest>

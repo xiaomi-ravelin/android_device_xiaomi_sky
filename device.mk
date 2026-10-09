@@ -48,10 +48,18 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResSky
+    FrameworksResSky \
+    SettingsProviderResSkyPocoM6Pro5G \
+    SettingsProviderResSkyRedmi125G \
+    SettingsProviderResSkyRedmi12R \
+    SettingsProviderResSkyRedmiNote12R
 
 # Power
 $(call soong_config_set,qtipower,tap_to_wake_node,/sys/class/touch/touch_dev/gesture_double_tap_enabled)
+
+# Properties
+PRODUCT_COPY_FILES += $(foreach f,$(wildcard $(LOCAL_PATH)/configs/props/boardid/*.prop), \
+    $(f):$(TARGET_COPY_OUT_ODM)/etc/boardid/$(notdir $(f)))
 
 # Sensors
 PRODUCT_COPY_FILES += \
