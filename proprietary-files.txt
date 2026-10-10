@@ -22,6 +22,8 @@ vendor/etc/usecaseKvManager.xml
 
 # Audio firmware
 vendor/firmware/aw87xxx_acf.bin
+vendor/lib/rfsa/adsp/misound_res_headphone.bin
+vendor/lib/rfsa/adsp/misound_res_spk.bin
 vendor/firmware/fs1599.fsm
 
 # Camera
