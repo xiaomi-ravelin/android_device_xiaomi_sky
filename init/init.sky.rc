@@ -66,3 +66,8 @@ on early-init && property:ro.boot.boardid=S88029EA1
 on early-init && property:ro.boot.boardid=S88029AA1
     setprop ro.boot.product.hardware.sku hcesim
     setprop ro.vendor.se.type HCE,UICC
+
+on early-boot
+    # KTD3136 high brightness mode (LiveDisplay sunlight enhancement), before the HAL starts with class hal
+    chown system system /sys/bus/i2c/devices/1-0036/hbm
+    chmod 0664 /sys/bus/i2c/devices/1-0036/hbm

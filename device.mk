@@ -46,6 +46,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.sky.rc
 
+# LiveDisplay (sunlight enhancement = backlight IC HBM)
+$(call soong_config_set_bool,livedisplay_sysfs,enable_se,true)
+$(call soong_config_set,livedisplay_sysfs,se_path,/sys/devices/platform/soc/9c0000.qcom$(comma)qupv3_0_geni_se/984000.i2c/i2c-1/1-0036/hbm)
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
